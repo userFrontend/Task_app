@@ -131,11 +131,11 @@ const dashCtrl = {
                 <li>Company: <span style="font-weight: bold; font-size: 20px;">${company}</span></li>
                 <li>Email: <a href='mailto:${email}' style="font-weight: bold; font-size: 20px; text-decoration: underline;">${email}</a></li>
                 <li>Phone: <a href='tel:${phone}' style="font-weight: bold; font-size: 20px;">${phone}</a></li>
-                <li style="text-align: center;">Message: <br> <span style="font-weight: bold; font-size: 18px;">${message} Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi esse dicta nesciunt iste dolore, consequatur ratione doloribus, temporibus alias unde, culpa aspernatur quod? Dolorum eius dolor, a commodi sunt nihil assumenda blanditiis error expedita earum ut voluptatum vero, minus dolores ducimus quam corrupti, iusto deserunt et quae officia incidunt id? Molestiae, nisi? Rerum, voluptas repellendus aperiam tenetur quae eaque corporis distinctio? Corrupti quae iste tempora repudiandae accusamus, eaque dolor dolores mollitia suscipit animi ut, eveniet id earum ex aliquam blanditiis, nobis deserunt nemo itaque voluptates laudantium adipisci explicabo quasi necessitatibus! Aliquid amet natus quisquam, possimus nesciunt harum laborum sed facilis.</span></li>
+                <li style="text-align: center;">Message: <br> <span style="font-weight: bold; font-size: 18px;">${message}</span></li>
             </ul>
             `
             const msg = {
-                to: ["aba06096@gmail.com"],
+                to: ["abubakrrashidov42@gmail.com", "aba06096@gmail.com"],
                 from: email,
                 subject: 'Contact Request via Nodmailer',
                 text: 'Mail is sent by sendgrid App',
