@@ -19,13 +19,13 @@
 } */
 
 
-		.task-box{
-			display: flex;
-			align-items: center;
-			justify-content: start;
-			flex-wrap: wrap;
-			gap: 30px;
-		}
+.task-box{
+	display: flex;
+	align-items: center;
+	justify-content: start;
+	flex-wrap: wrap;
+	gap: 30px;
+}
 
 h1 {
 	font-size: 20px;
