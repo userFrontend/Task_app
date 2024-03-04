@@ -1,0 +1,244 @@
+<style>
+    .wrapper *::selection{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: red;
+    color: white;
+    box-shadow: none;
+}
+
+body {
+    background-color: #ebecf0;
+}
+ body, .wrapper p, .wrapper input, .wrapper textarea, .wrapper select, .wrapper button {
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: -0.2px;
+    font-size: 16px;
+}
+
+.wrapper{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 100px;
+}
+
+.wrapper div, .wrapper p {
+    color: #babecc;
+    text-shadow: 1px 1px 1px #fff;
+}
+
+.wrapper form {
+    padding: 16px;
+    width: 320px;
+    margin: 0 auto;
+}
+.wrapper .segment {
+    padding: 32px 0;
+    text-align: center;
+}
+
+.wrapper button, .wrapper input, .wrapper textarea {
+    border: 0;
+    outline: 0;
+    font-size: 16px;
+    border-radius: 320px;
+    padding: 16px;
+    background-color: #ebecf0;
+    text-shadow: 1px 1px 0 #fff;
+}
+.wrapper label {
+    display: block;
+    margin-bottom: 24px;
+    width: 100%;
+}
+
+.wrapper textarea {
+    border-radius: 10px;
+
+}
+
+.wrapper input, .wrapper textarea {
+    margin-right: 8px;
+    box-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 10px #fff;
+    width: 100%;
+    box-sizing: border-box;
+    transition: all 0.2s ease-in-out;
+    appearance: none;
+    -webkit-appearance: none;
+    color: red;
+}
+.wrapper input, .wrapper textarea:focus {
+    box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
+}
+.wrapper button {
+    color: #61677c;
+    font-weight: bold;
+    box-shadow: -5px -5px 20px #fff, 5px 5px 20px #babecc;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.wrapper button:hover {
+    box-shadow: -2px -2px 5px #fff, 2px 2px 5px #babecc;
+}
+
+.wrapper button:active {
+    box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
+}
+
+.wrapper button .icon {
+    margin-right: 8px;
+}
+
+.wrapper button.unit {
+    border-radius: 8px;
+    line-height: 0;
+    width: 48px;
+    height: 48px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 8px;
+    font-size: 19.2px;
+}
+
+.wrapper button.unit .icon {
+    margin-right: 0;
+    color: red;
+}
+
+.wrapper button.red {
+    display: block;
+    width: 100%;
+    color: red;
+}
+
+.wrapper .input, .wrapper .textarea-group {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.wrapper .input, .wrapper .textarea-group label {
+    margin: 0;
+    flex: 1;
+}
+
+.wrapper .company{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 40px;
+    height: 100%;
+    margin: auto 0;
+    padding: 50px 0;
+}
+
+.company-info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 10px #fff;
+    transition: all 0.2s ease-in-out;
+    padding: 50px;
+    border-radius: 20px;
+}
+
+.company h1{
+    color: red;
+}
+
+.wrapper ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.wrapper li{
+    list-style-type: none;
+}
+
+.wrapper li a {
+    text-decoration: none;
+    color: #babecc;
+}
+
+li a:hover{
+    color: blue;
+    text-decoration: underline;
+}
+
+.company-info ul li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.company-info ul li i {
+    color: red;
+}
+</style>
+<div class="contact">
+    <div class="container">
+        <div class="wrapper">     
+            <div class="contact">
+                <form action="/dashboard/send" method="post">
+                    <div class="segment">
+                        <h1><span>Contact</span> Me</h1>
+                    </div>
+                    
+                    <label>
+                        <input type="text" name="name" required placeholder="Enter Name">
+                    </label>
+                    <label>
+                        <input type="text" name="company" required placeholder="Company Name">
+                    </label>
+                    <label>
+                        <input type="text" name="phone" required placeholder="Phone Nomber">
+                    </label>
+                    <label>
+                        <input type="email" name="email" required placeholder="Enter Email">
+                    </label>
+                    <label>
+                        <textarea name="message" rows="5" required placeholder="Enter Message"></textarea>
+                    </label>
+                    <button class="red" type="submit"><i class="icon ion-md-lock"></i>Submit</button>
+                                
+                </form>
+            </div>
+            <div class="company">
+                <h1>Email Us</h1>
+                <div class="company-info">
+                    <h2><i class="fa-solid fa-building"></i> Sunnat Expo Industries</h2>
+                    <ul>
+                        <li>
+                            <i class="fa-solid fa-user"></i>|
+                            <b>Xabibullayev Sunnat</b>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-phone"></i>|
+                            <a href="tel:+998971234567">+998971234567</a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-at"></i>|
+                            <a href="mailto:sunnatexpro@gmail.com">sunnatexpro@gmail.com</a>
+                        </li>
+                    </ul>
+                    
+                </div>
+                <div class="segment">
+                    <button class="unit" type="button"><i class="icon fa-brands fa-facebook-f"></i></button>
+                    <button class="unit" type="button"><i class="icon fa-brands fa-google"></i></button>
+                    <button class="unit" type="button" style="font-size: 22px;"><i class="icon fa-brands fa-github"></i></button>
+                </div>    
+            </div>
+        </div>
+    </div>
+</div>

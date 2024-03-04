@@ -1,0 +1,54 @@
+<div class="container pb-5 mb-5">
+    <div class="row mb-4">
+        <div class="col">
+            <h1>Hello <%= userName %></h1>
+        </div>
+        <div class="col text-end">
+            <a class="btn btn-outline-dark " href="/dashboard/add">
+                <div class="d-flex align-items-center">
+                    <img width="30" height="30" src="./img/add-task.png" alt="icon">
+                    <b>New Task</b>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="task-box">
+        <% if(tasks.length > 0){ tasks.forEach(task => {%>
+            <div class="task-item">
+                <div class="wrap animate pop">
+                    <div class="overlay">
+                        <div class="overlay-content animate slide-left delay-2">
+                            <h1 class="animate slide-left pop delay-4"><%= task.title %></h1>
+                            <p class="animate slide-left pop delay-5" style="color: white; margin-bottom: 2.5rem;">Created: <em><%= new Date(task.createdAt).toLocaleDateString() %></em></p>
+                        </div>
+                        <div class="image-content animate slide delay-5"></div>
+                                <div class="dots animate">
+                                    <div class="dot animate slide-up delay-6"></div>
+                                    <div class="dot animate slide-up delay-7"></div>
+                                    <div class="dot animate slide-up delay-8"></div>
+                                </div>
+                    </div>
+                        <a href="/dashboard/item/<%= task._id %>" class="text text-decoration-none text-center">
+                            <h4><%= task.title %> </h4>
+                            <p><%= task.body  %></p>
+                        </a>
+                </div>
+            </div>
+        <% })} else { %>
+            <div class="row">
+                <div class="col-3">
+                    <img src="" alt="boy_img" class="img-fluid">
+                </div>
+                <div class="col mt-md-4">
+                    <h2>Welcome</h2>
+                </div>
+            </div>
+        <%}%>
+        <% if(tasks.length > 0){ %>
+            <nav aria-label="Page navigation example">
+                
+            </nav>
+            <% } %>
+    </div>
+</div>
